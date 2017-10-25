@@ -1,0 +1,21 @@
+// flex
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-sb{
+  justify-content: space-between;
+}
+.align-center{
+  align-items: center;
+}
+.justify-end{
+  justify-content: flex-end;
+}
+
+//position
+.fixed-to-top{
+  position: fixed;
+  z-index: 99;
+  top:0;
+}

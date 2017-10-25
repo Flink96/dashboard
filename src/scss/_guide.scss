@@ -1,0 +1,29 @@
+//btn
+
+%btn{
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: $fontLight;
+  font-size: 18px;
+  color: $xsLightGrey;
+}
+.btn-default{
+  @extend %btn;
+  background-color: $darkGrey;
+  &:hover{
+    background-color: $grey;
+  }
+}
+
+.btn-action{
+  @extend %btn;
+  background-color: $orange;
+  &:hover{
+    background-color: $orangeLight;
+  }
+}
+.btn-disabled{
+  @extend %btn;
+  background-color: $lightGrey;
+}
