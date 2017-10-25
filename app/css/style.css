@@ -216,6 +216,35 @@ button {
   top: 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-orange {
+  color: #f58220;
+}
+
+.text-gray {
+  color: #bababa;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.circle {
+  padding: 4px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  background-color: #04ae00;
+  display: inline-block;
+  position: absolute;
+}
+
 .page-title, .section-title {
   color: #a6a6a6;
   font-size: 16px;
@@ -237,6 +266,7 @@ button {
 }
 
 #header .user-control {
+  position: relative;
   padding: 18px;
   border-left: 1px solid #e3e3e3;
   font-size: 20px;
@@ -244,8 +274,25 @@ button {
   color: #979797;
 }
 
+#header .user-control .circle {
+  right: 10%;
+  top: 0%;
+}
+
+#header .user-control.open {
+  background-color: #f5f5f5;
+}
+
+#header .user-control.open .icon-arrow-down {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 #header .user-control a {
   vertical-align: middle;
+  position: relative;
 }
 
 #header .user-control i {
@@ -253,12 +300,15 @@ button {
 }
 
 #header .user-control span {
-  margin: 0 20px 0 15px;
   vertical-align: middle;
 }
 
 #header .user-control .icon-arrow-down {
   font-size: 12px;
+}
+
+#header .user-control.profile a {
+  margin: 0 20px 0 15px;
 }
 
 #header .profile span {
@@ -338,6 +388,15 @@ button {
   padding: 0 18px;
 }
 
+#aside .manager-menu .info-manager .manager-img {
+  position: relative;
+}
+
+#aside .manager-menu .info-manager .manager-img .circle {
+  right: 10%;
+  top: 0%;
+}
+
 #aside .manager-menu .info-manager .manager-name {
   margin-left: 10px;
   color: #56819f;
@@ -362,6 +421,98 @@ button {
 .card .card-header {
   border-bottom: 1px solid #e3e3e3;
   padding: 18px;
+}
+
+.card .card-date {
+  padding: 30px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.datepicker-form .date-input-wrap {
+  padding: 5px 0;
+  display: inline-block;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #333;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.datepicker-form .date-input-wrap input {
+  padding: 11px 16px;
+  vertical-align: middle;
+}
+
+.datepicker-form .date-input-wrap input#to {
+  border-left: 1px solid #e3e3e3;
+}
+
+.datepicker-form .date-input-wrap label {
+  padding: 0 14px 0 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.datepicker-form .date-input-wrap label i {
+  color: #bababa;
+}
+
+.datepicker-form .btn {
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f5f5f5;
+  padding: 10px 18px 24px;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container.sm {
+  max-width: 684px;
+}
+
+.table {
+  font-size: 13px;
+}
+
+.table tbody tr {
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f3f3;
+}
+
+.table tbody tr:hover .hide-icons {
+  opacity: 1;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.table td {
+  padding: 18px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.table td .hide-icons {
+  opacity: 0;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 #main {

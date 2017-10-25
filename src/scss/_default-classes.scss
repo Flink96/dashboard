@@ -19,3 +19,35 @@
   z-index: 99;
   top:0;
 }
+.text-center{
+  text-align: center;
+}
+
+//text-color
+
+.text-orange{
+  color: $orange;
+}
+.text-gray{
+  color: $grey;
+}
+
+//width
+
+.full-width{
+  width:100%;
+}
+
+//text weight
+
+.text-bold{
+  font-weight: 700;
+}
+
+.circle{
+  padding: 4px;
+  border-radius: 20px;
+  background-color: $green;
+  display: inline-block;
+  position: absolute;
+}

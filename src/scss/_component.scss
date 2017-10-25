@@ -20,22 +20,37 @@
   border-bottom: 1px solid $lightGrey;
   background-color: $headerbg;
   .user-control{
+    position: relative;
     padding: 18px;
     border-left:1px solid $lightGrey;
     font-size: 20px;
     font-weight: $fontRegular;
     color: $darkGrey;
+
+    .circle{
+      right: 10%;
+      top: 0%;
+    }
+
+    &.open{
+      background-color: $xsLightGrey;
+
+      .icon-arrow-down{
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
     &:hover {
           @extend %activeTop;
       }
     a{
       vertical-align: middle;
+      position: relative;
     }
     i{
       vertical-align: middle;
     }
     span{
-      margin: 0 20px 0 15px;
       vertical-align: middle;
     }
 
@@ -43,8 +58,12 @@
       font-size: 12px;
     }
   }
+  .user-control.profile{
+    a{
+      margin: 0 20px 0 15px;
+    }
+  }
   .profile{
-
     span{
       font-size: 13px;
       color: $blue;
@@ -121,6 +140,13 @@
      .info-manager{
        display: flex;
        padding: 0 18px;
+       .manager-img{
+         position: relative;
+         .circle{
+           right: 10%;
+           top: 0%;
+         }
+       }
        .manager-name{
           margin-left: 10px;
           color: $blue;
@@ -146,5 +172,93 @@
   .card-header{
     border-bottom: 1px solid $lightGrey;
     padding: 18px;
+  }
+
+  .card-date{
+    padding: 30px 0;
+    border-bottom: 1px solid $lightGrey;
+  }
+}
+
+.datepicker-form{
+  .date-input-wrap{
+    padding: 5px 0;
+    display: inline-block;
+    border: 1px solid $lightGrey;
+    border-radius: 3px;
+    color: $black;
+    vertical-align: middle;
+    margin-right: 12px;
+
+    input{
+      padding: 11px 16px;
+      vertical-align: middle;
+
+      &#to{
+        border-left: 1px solid $lightGrey;
+      }
+    }
+    label{
+      padding: 0 14px 0 10px;
+      vertical-align: middle;
+      display: inline-block;
+      i{
+        color: $grey;
+      }
+    }
+  }
+  .btn{
+    vertical-align: middle;
+    line-height: 0;
+
+  }
+}
+
+//dropdown
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  background-color: $xsLightGrey;
+  padding: 10px 18px 24px;
+  top:100%;
+  left: 0;
+  right:0;
+}
+
+//container
+.container{
+  margin: 0 auto;
+  &.sm{
+    max-width: 684px;
+  }
+}
+
+//table
+
+.table{
+  font-size: $tableFontSize;
+  tbody{
+    tr{
+      transition: .2s linear;
+      &:hover{
+        background-color: $tableTrHover;
+        .hide-icons{
+          opacity:1;
+        }
+      }
+      &:last-child {
+        td {
+          border-bottom: 1px solid $lightGrey;
+        }
+      }
+    }
+  }
+  td{
+    padding: 18px;
+    border-top: 1px solid $lightGrey;
+    .hide-icons{
+      opacity:0;
+      transition: all .3s linear;
+    }
   }
 }
