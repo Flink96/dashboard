@@ -9,6 +9,9 @@
 .align-center{
   align-items: center;
 }
+.align-self-end{
+  align-self: flex-end;
+}
 .justify-end{
   justify-content: flex-end;
 }
@@ -52,6 +55,7 @@
   position: absolute;
 }
 
-.border-bot-none{
-  border-bottom: 0 !important;
+.white-bg{
+  color: white;
 }
+

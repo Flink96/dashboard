@@ -1,3 +1,62 @@
+//loader
+#loading{
+  background-color: #bd4932;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 101;
+  margin-top: 0px;
+  top: 0px;
+  transition: opacity .3s linear, z-index .1s linear .3s;
+  &.hide{
+    z-index: -1;
+    opacity:0;
+  }
+}
+#loading-center{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+#object{
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+  -webkit-animation: animate 1s infinite ease-in-out;
+  animation: animate 1s infinite ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+      transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+      -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+    } 100% {
+        transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+        -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+      }
+}
+
 // title
 %title{
   color: $titleColor;
@@ -172,11 +231,45 @@
   .card-header{
     border-bottom: 1px solid $lightGrey;
     padding: 18px;
+      span{
+        font-size: 16px;
+        font-weight: $fontMeium;
+        color: $grey;
+      }
   }
 
   .card-date{
     padding: 30px 0;
     border-bottom: 1px solid $lightGrey;
+  }
+  .card-form{
+    .selct-group{
+      padding: 18px;
+    }
+    .input-group{
+      label{
+        display: block;
+        font-size: 16px;
+        color: $grey;
+        font-weight: $fontBold;
+      }
+      input{
+        width: 100%;
+      }
+    }
+  }
+  .card-footer{
+    padding: 18px;
+    border-top: 1px solid $lightGrey;
+    input{
+      width: 716px;
+    }
+    button{
+      margin-left: 15px;
+      span{
+        margin-left: 15px;
+      }
+    }
   }
 }
 
@@ -238,6 +331,9 @@
 .table{
   font-size: $tableFontSize;
   tbody{
+    td{
+      padding: 15px;
+    }
     tr{
       transition: .2s linear;
       &:hover{
@@ -254,11 +350,92 @@
     }
   }
   td{
-    padding: 18px;
     border-top: 1px solid $lightGrey;
     .hide-icons{
       opacity:0;
       transition: all .3s linear;
+    }
+  }
+}
+
+.modal{
+  background-color: $modalBg;
+  display: none;
+
+  &#links{
+    width: 70%;
+    min-height: 100px;
+  }
+}
+
+//table
+.links{
+  table{
+      padding-left: 18px;
+  }
+  thead{
+    td{
+      border-top: none;
+    }
+  }
+  tbody{
+    td{
+      line-height: 1.7em;
+    }
+  }
+}
+.td-info{
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+    i{
+    font-size: 7px;
+    margin-left: 10px;
+    opacity: 0;
+    }
+  &:hover{
+    transition: all .3s linear;
+    background-color: $lightGrey;
+    color: $black;
+    i{
+      opacity: 1;
+    }
+  }
+}
+.pageNavigation{
+  text-align: center;
+  .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: center;
+    li {
+      display: inline;
+      &:hover{
+        a{
+          background-color: $lightGrey;
+        }
+      }
+      a {
+        position: relative;
+        float: left;
+        padding: 6px 12px;
+        margin-left: -1px;
+        line-height: 1.42857143;
+        color: #337ab7;
+        text-decoration: none;
+        background-color: #fff;
+
+      }
+      &:first-child {
+        margin-left: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      &:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
     }
   }
 }

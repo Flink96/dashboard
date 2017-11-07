@@ -68,7 +68,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="details.html">
                     <i class="icon-details"></i>
                     <span>Details</span>
                 </a>
@@ -132,7 +132,7 @@
             <div class="card-body">
                 <div class="links">
                     <div class="btn-row text-center">
-                        <button class="btn btn-action">
+                        <button class="btn btn-action" data-modal data-target='#links'>
                             add new
                         </button>
                     </div>
@@ -173,12 +173,67 @@
     </div>
 </main>
 <!--MAIN END-->
+<div class="modal" id="links">
+    <div class="card">
+        <div class="card-header">
+            <div class="flex-container justify-sb">
+                <span>ADD URL</span>
+                <a href="links.html">
+                <i class="icon-close"></i>
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card-form">
+                <form>
+                    <div class="selct-group flex-container align-center">
+                        <div class="input-group">
+                            <label >Scheme name</label>
+                            <input type="text" class="form-control align-self-end input-default">
+                        </div>
+                        <div class="input-group align-self-end">
+                            <select name="" id="">
+                                <option value="">Select compain</option>
+                                <option value="">two</option>
+                            </select>
+                        </div>
+                        <div class="input-group align-self-end">
+                            <label >Language</label>
+                            <select name="" id="">
+                                <option value="">EN</option>
+                                <option value="">RU</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card-footer">
+            <input type="text" placeholder="Genereted link" class="form-control align-self-end input-default">
+            <button class="btn-disabled">
+                <i class="icon-links"></i>
+                <span>Copy links</span>
+            </button>
+            <button class="btn-action">Save</button>
+        </div>
+    </div>
 
+</div>
+
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+
+</div>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+<script src="js/jquery.bpopup.min.js"></script>
 <!--Init plugins-->
+<script src="js/jquery.formstyler.min.js"></script>
 <script src="js/init.js"></script>
 <script src="js/plugins.min.js"></script>
 </body>
