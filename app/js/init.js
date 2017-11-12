@@ -38,7 +38,9 @@ $( function() {
 
         e.preventDefault();
         var target = $(this).attr('data-target');
-        $(target).bPopup();
+        $(target).bPopup({
+            closeClass: 'close'
+        });
     })
     //form element styler init
 

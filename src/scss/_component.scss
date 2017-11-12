@@ -235,9 +235,20 @@
         font-size: 16px;
         font-weight: $fontMeium;
         color: $grey;
+        text-transform: uppercase;
       }
+    span+span{
+      font-size: 12px;
+      cursor: pointer;
+    }
   }
-
+  .card-body{
+    .links{
+      .btn-row{
+        padding: 20px 0;
+      }
+    }
+  }
   .card-date{
     padding: 30px 0;
     border-bottom: 1px solid $lightGrey;
@@ -245,6 +256,13 @@
   .card-form{
     .selct-group{
       padding: 18px;
+    }
+    //.input-group.width{
+    //  width: 300px;
+    //}
+    .input-group:nth-child(n+4){
+      width: 296px;
+      margin-top: 35px;
     }
     .input-group{
       label{
@@ -254,6 +272,7 @@
         font-weight: $fontBold;
       }
       input{
+        max-width: 370px;
         width: 100%;
       }
     }
@@ -262,7 +281,8 @@
     padding: 18px;
     border-top: 1px solid $lightGrey;
     input{
-      width: 716px;
+      max-width: 640px;
+      width: 100%;
     }
     button{
       margin-left: 15px;
@@ -362,10 +382,10 @@
   background-color: $modalBg;
   display: none;
 
-  &#links{
-    width: 70%;
-    min-height: 100px;
-  }
+  &#links,&#banners{
+     width: 70%;
+     min-height: 100px;
+   }
 }
 
 //table

@@ -35,6 +35,9 @@
   height: 40px;
   border-radius: 3px;
   border: 1px solid $lightGrey;
+  font-weight: $fontLight;
+  padding: 15px;
+  font-size: 14px;
   &:hover{
     border: 1px solid $darkGrey;
   }

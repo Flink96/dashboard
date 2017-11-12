@@ -1,10 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-$END$
+<!--HEADER START-->
+<header id="header" class="fixed-to-top">
+    <div class="flex-container justify-end">
+        <div class="user-control dropdown-wrap">
+            <i class="icon-wallet"></i>
+            <span>$1,500.00</span>
+            <i class="icon-arrow-down"></i>
+            <span class="dropdown-menu">
+                    <ul>
+                        <li><a href="" class="dropdown-link">Link1</a></li>
+                        <li><a href="" class="dropdown-link">Link1</a></li>
+                        <li><a href=""class="dropdown-link">Link1</a></li>
+                    </ul>
+                </span>
+        </div>
+        <div class="user-control">
+            <a href="">
+                <i class="icon-notification"></i>
+            </a>
+        </div>
+        <div class="user-control profile">
+            <a href="">
+                <i class="icon-profile"></i>
+                <span>Leonardo Dicaprio</span>
+            </a>
+        </div>
+        <div class="user-control">
+            <a href=""><i class="icon-quit"></i></a>
+        </div>
+    </div>
+</header>
+<!--HEADER END-->
+
+<!--ASIDE START-->
+<aside id="aside" class="fixed-to-top">
+    <div class="menu-control flex-container justify-sb align-center">
+        <div class="logo">
+            <a href="">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="aside-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="icon-general"></i>
+                    <span>General</span>
+                </a>
+            </li>
+            <li>
+                <a href="details.html">
+                    <i class="icon-details"></i>
+                    <span>Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="links.html">
+                    <i class="icon-links"></i>
+                    <span>Links</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="banners.html">
+                    <i class="icon-banners"></i>
+                    <span>Banners</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-personaldata"></i>
+                    <span>Personal data</span>
+                </a>
+            </li>
+            <li>
+                <a href="payout.html">
+                    <i class="icon-payout"></i>
+                    <span>Payout</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-postback"></i>
+                    <span>Postback</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="manager-menu">
+        <div class="title-manager">
+            <span>Your manager</span>
+        </div>
+        <div class="info-manager">
+            <div class="manager-img">
+                <img src="img/manager.png" alt="">
+            </div>
+            <div class="manager-name">
+                <span>Mikhael E.</span>
+            </div>
+        </div>
+    </div>
+</aside>
+<!--ASIDE END-->
+<!--MAIN START-->
+<main id="main">
+    <div class="content-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <span class="page-title">Banners</span>
+                <!--/CARD HEADER-->
+            </div>
+
+            <div class="card-body">
+                <div class="links">
+                    <div class="btn-row text-center">
+                        <button class="btn btn-action" data-modal data-target='#banners'>
+                            add new
+                        </button>
+                    </div>
+                    <div class="container sm">
+                        <table class="table full-width">
+                            <tr>
+                                <td class="text-gray text-bold">Home page</td>
+                                <td><a href="">Link</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-gray text-bold">Home page</td>
+                                <td><a href="">Link</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-gray text-bold">Home page</td>
+                                <td><a href="">Link</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-row text-center">
+                        <button class="btn btn-action" data-modal data-target='#banners'>
+                            add new
+                        </button>
+                    </div>
+                </div>
+                <!--/CARD BODY-->
+            </div>
+            <!--/CARD-->
+        </div>
+    </div>
+</main>
+<!--MAIN END-->
+</div>
+<div class="modal" id="banners">
+    <div class="card">
+        <div class="card-header">
+            <div class="flex-container justify-sb">
+                <span>ADD BANNERS</span>
+                <span class="close"><i class="icon-close"></i></span>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card-form">
+                <form>
+                    <div class="selct-group flex-container align-center">
+                        <div class="input-group">
+                            <label >Scheme name</label>
+                            <input placeholder="Name" type="text" class="form-control align-self-end input-default">
+                        </div>
+                        <div class="input-group align-self-end">
+                            <label>Compain</label>
+                            <select name="" id="">
+                                <option value="">Select</option>
+                                <option value="">two</option>
+                            </select>
+                        </div>
+                        <div class="input-group align-self-end">
+                            <label >Language</label>
+                            <select name="" id="">
+                                <option value="">EN</option>
+                                <option value="">RU</option>
+                            </select>
+                        </div>
+                        <div class="input-group width margin align-self-end">
+                            <label >Weight-height</label>
+                            <select name="" id="">
+                                <option value="">Select</option>
+                                <option value="">two</option>
+                            </select>
+                        </div>
+                        <div class="input-group width align-self-end">
+                            <label >Design</label>
+                            <select name="" id="">
+                                <option value="">Select</option>
+                                <option value="">two</option>
+                            </select>
+                        </div>
+                        <div class="input-group width align-self-end">
+                            <label >File type</label>
+                            <select name="" id="">
+                                <option value="">All</option>
+                                <option value="">two</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card-footer">
+            <input type="text" placeholder="Genereted link" class="form-control align-self-end input-default">
+            <button class="btn-disabled">
+                <i class="icon-links"></i>
+                <span>Copy links</span>
+            </button>
+            <button class="btn-action">Save</button>
+        </div>
+    </div>
+
+</div>
+
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+
+</div>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<!--Init plugins-->
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/plugins.min.js"></script>
 </body>
 </html>
+

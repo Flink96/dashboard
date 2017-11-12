@@ -71,10 +71,14 @@
   }
 }
 .input-group{
-  width: 417px;
+  max-width: 380px;
+  width: 100%;
 }
 .input-group+.input-group+.input-group{
 width: 130px;
+}
+.input-group.width.margin{
+  margin-left: 0;
 }
 .input-group+.input-group{
   margin-left: 15px;
