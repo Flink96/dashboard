@@ -277,6 +277,60 @@
       }
     }
   }
+  //checkboxes
+  input[type="checkbox"]{
+    display: none;
+
+    & + label{
+      font-size: 14px;
+      cursor: pointer;
+      user-select: none;
+
+      &::before{
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border:1px solid $lightGrey;
+        background-color: #fff;
+        margin-left: 16px;
+        margin-right: 12px;
+      }
+    }
+    &:checked{
+      & + label{
+        &::before{
+          background: $green url('../img/checkbox-bg.png') no-repeat center;
+        }
+    }
+    }
+  }
+//checkbox wrapper
+
+  .checkbox-wrap{
+    padding: 30px 18px;
+    .checkboxes{
+      padding-top: 30px;
+      .checkbox-group{
+        padding: 12px 30px 12px 12px;
+        flex-grow: 1;
+        flex-basis: 33%;
+
+        &:hover{
+          background-color: $xsLightGrey;
+
+          [class*='icon-']{
+            opacity: 1;
+          }
+        }
+        [class*='icon-']{
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+
   .card-footer{
     padding: 18px;
     border-top: 1px solid $lightGrey;

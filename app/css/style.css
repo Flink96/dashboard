@@ -256,6 +256,10 @@ button {
   color: white;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 #loading {
   background-color: #bd4932;
   height: 100%;
@@ -546,6 +550,65 @@ button {
 .card .card-form .input-group input {
   max-width: 370px;
   width: 100%;
+}
+
+.card input[type="checkbox"] {
+  display: none;
+}
+
+.card input[type="checkbox"] + label {
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.card input[type="checkbox"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e3e3e3;
+  background-color: #fff;
+  margin-left: 16px;
+  margin-right: 12px;
+}
+
+.card input[type="checkbox"]:checked + label::before {
+  background: #04ae00 url("../img/checkbox-bg.png") no-repeat center;
+}
+
+.card .checkbox-wrap {
+  padding: 30px 18px;
+}
+
+.card .checkbox-wrap .checkboxes {
+  padding-top: 30px;
+}
+
+.card .checkbox-wrap .checkboxes .checkbox-group {
+  padding: 12px 30px 12px 12px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-basis: 33%;
+      -ms-flex-preferred-size: 33%;
+          flex-basis: 33%;
+}
+
+.card .checkbox-wrap .checkboxes .checkbox-group:hover {
+  background-color: #f5f5f5;
+}
+
+.card .checkbox-wrap .checkboxes .checkbox-group:hover [class*='icon-'] {
+  opacity: 1;
+}
+
+.card .checkbox-wrap .checkboxes .checkbox-group [class*='icon-'] {
+  opacity: 0;
 }
 
 .card .card-footer {
