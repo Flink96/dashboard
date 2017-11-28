@@ -190,28 +190,34 @@
         <div class="card-body">
             <div class="card-form">
                 <form>
-                    <div class="selct-group flex-container align-center">
-                        <div class="input-group">
-                            <label >Scheme name</label>
-                            <input type="text" class="form-control align-self-end input-default">
+                    <div class="select-block flex-container full-width">
+                        <div class="select-blok-one width-select flex-container" >
+                            <div class="input-group width-half">
+                                <label >Scheme name</label>
+                                <input placeholder="Name" type="text" class="form-control align-self-end input-default">
+                            </div>
+                            <div class="input-group width-half">
+                                <label>Compain</label>
+                                <select name="" id="">
+                                    <option value="">Select</option>
+                                    <option value="">two</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="input-group align-self-end">
-                            <select name="" id="">
-                                <option value="">Select compain</option>
-                                <option value="">two</option>
-                            </select>
+                        <div class="select-block-two">
+                            <div class="input-group ">
+                                <label >Language</label>
+                                <select name="" id="">
+                                    <option value="">EN</option>
+                                    <option value="">RU</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="input-group align-self-end">
-                            <label >Language</label>
-                            <select name="" id="">
-                                <option value="">EN</option>
-                                <option value="">RU</option>
-                            </select>
-                        </div>
+
                     </div>
                     <div class="checkbox-wrap">
                         <h3 class="section-title">Select Websites</h3>
-                        <div class="checkboxes flex-container">
+                        <div class="checkboxes flex-container scrollbar-inner">
                             <div class="checkbox-group flex-container align-center">
                                 <input type="checkbox" name="link1" id="link1">
                                 <label for="link1" class="flex-container align-center">Landing page Money</label>
@@ -242,18 +248,48 @@
                                 <label for="link6" class="flex-container align-center">Landing page Money</label>
                                 <a href="" class="ml-auto"><i class="icon-show"></i></a>
                             </div>
+                            <div class="checkbox-group flex-container align-center">
+                                <input type="checkbox" name="link7" id="link7">
+                                <label for="link7" class="flex-container align-center">Landing page Money</label>
+                                <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                            </div>
+                            <div class="checkbox-group flex-container align-center">
+                                <input type="checkbox" name="link8" id="link8">
+                                <label for="link8" class="flex-container align-center">Landing page Money</label>
+                                <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                            </div>
+                            <div class="checkbox-group flex-container align-center">
+                                <input type="checkbox" name="link9" id="link9">
+                                <label for="link9" class="flex-container align-center">Landing page Money</label>
+                                <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                            </div>
+                            <div class="checkbox-group flex-container align-center">
+                                <input type="checkbox" name="link10" id="link10">
+                                <label for="link10" class="flex-container align-center">Landing page Money</label>
+                                <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                            </div>
+                            <div class="checkbox-group flex-container align-center">
+                                <input type="checkbox" name="link11" id="link11">
+                                <label for="link11" class="flex-container align-center">Landing page Money</label>
+                                <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                            </div>
+                            <div class="checkbox-group flex-container align-center">
+                                <input type="checkbox" name="link12" id="link12">
+                                <label for="link12" class="flex-container align-center">Landing page Money</label>
+                                <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="card-footer flex-container align-center">
+                        <input type="text" placeholder="Genereted link" class="form-control align-self-end input-default">
+                        <button class="btn-disabled">
+                            <i class="icon-links"></i>
+                            <span>Copy links</span>
+                        </button>
+                        <button class="btn-action">Save</button>
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="card-footer">
-            <input type="text" placeholder="Genereted link" class="form-control align-self-end input-default">
-            <button class="btn-disabled">
-                <i class="icon-links"></i>
-                <span>Copy links</span>
-            </button>
-            <button class="btn-action">Save</button>
         </div>
     </div>
 
@@ -270,9 +306,12 @@
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
 <script src="js/jquery.bpopup.min.js"></script>
 <!--Init plugins-->
 <script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
 <script src="js/init.js"></script>
 <script src="js/plugins.min.js"></script>
 </body>

@@ -254,6 +254,8 @@
     border-bottom: 1px solid $lightGrey;
   }
   .card-form{
+    .select-block{}
+    padding: 0 18px 0 18px;
     .selct-group{
       padding: 18px;
     }
@@ -271,13 +273,19 @@
         color: $grey;
         font-weight: $fontBold;
       }
-      input{
-        max-width: 370px;
-        width: 100%;
-      }
     }
   }
   //checkboxes
+  @media (max-width: 1199px) {
+    .checkbox-group {
+      input[type="checkbox"] {
+        & + label {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
   input[type="checkbox"]{
     display: none;
 
@@ -306,11 +314,194 @@
     }
   }
 //checkbox wrapper
+@media (max-width: 1199px) {
+  .checkbox-wrap{
+    .checkboxes{
+      .checkbox-group{
+        padding: 12px 20px 12px 12px !important;
+      }
+    }
+  }
+}
+  //links Start
+  @media (max-width: 991px) {
+    .checkbox-wrap {
+      .checkboxes {
+        .checkbox-group {
+          flex-basis: 50% !important;
+        }
+      }
+    }
+    .width-select {
+      width: 80%;
+    }
+    .select-block {
+      .select-block-two {
+        width: 20%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .width-select {
+      width: 75%;
+    }
+    .select-block {
+      .select-blok-one{
+        .input-group+.input-group{
+          padding-left: 10px;
+        }
+      }
+      .select-block-two {
+        width: 25%;
+        padding-left: 10px;
+      }
+    }
+    .checkbox-wrap {
+      .checkboxes {
+        .checkbox-group {
+          flex-basis: 100% !important;
+        }
+      }
+    }
+    .card-footer{
+      input{
+        padding: 9px;
+        width: 115px;
+      }
+    }
+  }
+  @media (max-width: 655px) {
+    .card-footer {
+      .btn-disabled{
+        margin-right: 15px;
+      }
+      .btn-action {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+      }
+    }
+  }
+  @media (max-width:599px) {
+  .card-footer{
+    flex-direction: column;
+  }
+  input{
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  .select-block{
+    flex-direction: column;
+  }
 
+  .select-block{
+    .select-block-two{
+      width: 30%;
+      padding-left: 0;
+      align-self: center;
+    }
+    .select-blok-one{
+      width: 100%;
+    }
+  }
+}
+  @media (max-width: 479px) {
+    .width-half{
+      width: 70%;
+    }
+    .select-block{
+      .input-group+.input-group{
+        padding-left: 0;
+        padding-bottom: 10px;
+      }
+      .select-block-two{
+        width: 55%;
+      }
+      .select-blok-one{
+        flex-direction: column;
+        align-self: center;
+        .input-group{
+          align-self: center;
+        }
+      }
+    }
+  }
+  @media (max-width: 479px) {
+    input[type="checkbox"] + label::before{
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 5px;
+    }
+  .ml-auto{
+    margin-right: auto;
+    padding-top: 5px;
+  }
+  .checkbox-wrap {
+    .checkboxes {
+      .checkbox-group {
+        flex-direction: column;
+        label{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .card-footer{
+    .btn-disabled{
+      padding: 9px 15px;
+      font-size: 13px;
+    }
+  }
+}
+  //linksEnd
+  
+  //banners start
+  @media (max-width: 767px) {
+  .checkbox-all{
+     flex-direction: column;
+     .width-half{
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 599px) {
+    .select-block{
+      .width-half-past{
+        width: 70%;
+        align-self: center;
+      }
+      .input-group+.input-group{
+        padding-left: 0;
+      }
+      .input-group+.input-group+.input-group{
+        padding-left: 0;
+      }
+    }
+  }
+  @media (max-width: 479px) {
+    .select-block {
+      .select-blok-one {
+        .input-group + .input-group {
+          padding-left: 0;
+        }
+      }
+    }
+    .links{
+      .btn-row{
+        .btn-action{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  //banners end
+  
   .checkbox-wrap{
     padding: 30px 18px;
     .checkboxes{
       padding-top: 30px;
+      height: 170px;
       .checkbox-group{
         padding: 12px 30px 12px 12px;
         flex-grow: 1;
@@ -335,18 +526,137 @@
     padding: 18px;
     border-top: 1px solid $lightGrey;
     input{
-      max-width: 640px;
-      width: 100%;
+      flex-grow: 1;
     }
     button{
       margin-left: 15px;
+      i{
+        vertical-align: sub;
+      }
       span{
         margin-left: 15px;
       }
     }
   }
 }
+@media (max-width: 991px) {
+  body {
+    #main {
+      padding-top: 50px;
+    }
+  }
+  .card-date {
+    .datepicker-form {
+      .date-input-wrap {
+        input {
+          padding: 10px 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+    #header {
+      .flex-container{
+        .user-control{
+          padding: 10px;
+        }
+      }
+    }
+}
+@media (max-width: 767px) {
+  body {
+    #main {
+      padding-top: 40px;
+    }
+  }
+  .card {
+    .padding_chart {
+      padding: 5px 10px;
+    }
+  }
+  #header {
+    .flex-container{
+      .user-control{
+        font-size: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 479px) {
+  #aside{
+    .aside-menu{
+      ul{
+        li{
+          a{
+            padding: 7px;
+          }
+        }
+      }
+    }
+  }
+  .card{
+    .card-header{
+      span{
+        font-size: 13px;
+      }
+    }
+  }
+  body {
+    #main {
+      padding-top: 20px;
+      .content-wrapper{
+        padding: 0;
+      }
+    }
+  }
+  #header {
+    .flex-container{
+      .user-control{
+        font-size: 10px;
+        padding: 5px;
+      }
+      .user-control.profile{
+        a {
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+  .card-date{
+    .datepicker-form{
+      button{
+        margin-bottom: 10px;
+      }
+      .date-input-wrap {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .circle{
+    padding: 2px;
+  }
+}
 
+#header .user-control.profile a {
+  margin: 0 20px 0 15px;
+}
+
+@media (max-width: 767px) {
+  .card-date{
+  .datepicker-form{
+    .date-input-wrap {
+      padding: 0;
+      input {
+        width: 80px;
+        padding:7px 6px;
+      }
+    }
+   }
+  }
+}
 .datepicker-form{
   .date-input-wrap{
     padding: 5px 0;
@@ -476,40 +786,57 @@
     }
   }
 }
-.pageNavigation{
-  text-align: center;
-  .pagination {
-    display: inline-block;
-    padding-left: 0;
-    margin: 20px 0;
-    text-align: center;
-    li {
-      display: inline;
-      &:hover{
-        a{
-          background-color: $lightGrey;
-        }
-      }
-      a {
-        position: relative;
-        float: left;
-        padding: 6px 12px;
-        margin-left: -1px;
-        line-height: 1.42857143;
-        color: #337ab7;
-        text-decoration: none;
-        background-color: #fff;
 
-      }
-      &:first-child {
-        margin-left: 0;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-      }
-      &:last-child {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-      }
+
+//range slider
+
+#custom-handle{
+  top: 12px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  background: transparent;
+  border-bottom-color: aqua;
+  span{
+    position: absolute;
+    top:25px;
+    right: -25px;
+  }
+}
+
+.range-slider{
+  height: 100px;
+  padding: 30px 18px;
+}
+#slider{
+  margin-top: 30px;
+}
+.ui-slider-handle:active{
+  color: black;
+}
+.chekbox-slider-groupe{
+  border-bottom: 1px solid $lightGrey;
+  .checkbox-wrap{
+    h3{
+      margin-bottom: 15px;
     }
+  }
+}
+
+.card-footer-postback{
+  padding: 18px;
+}
+
+.padding_chart{
+  padding:35px 185px;
+}
+@media (max-width: 1199px) {
+  .padding_chart{
+    padding:35px 100px;
+  }
+}
+@media (max-width: 991px) {
+  .padding_chart{
+    padding:35px 50px;
   }
 }

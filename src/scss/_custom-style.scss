@@ -70,16 +70,90 @@
     }
   }
 }
-.input-group{
-  max-width: 380px;
-  width: 100%;
-}
-.input-group+.input-group+.input-group{
-width: 130px;
-}
-.input-group.width.margin{
-  margin-left: 0;
-}
-.input-group+.input-group{
-  margin-left: 15px;
+//.input-group{
+//  max-width: 380px;
+//  width: 100%;
+//}
+//.input-group+.input-group+.input-group{
+//width: 130px;
+//}
+//.input-group.width.margin{
+//  margin-left: 0;
+//}
+//.input-group+.input-group{
+//  margin-left: 15px;
+//}
+
+
+
+  .text-area-group {
+    padding: 35px 18px 18px 18px;
+    .text-area-form {
+      .text-area {
+        margin-top: 25px;
+        span {
+          font-size: 16px;
+          color: $grey;
+          font-weight: $fontBold;
+        }
+        textarea {
+          resize: none;
+          height: 180px;
+          margin-top: 20px;
+          border-radius: 3px;
+          border-color: $lightGrey;
+        }
+      }
+    }
+  }
+
+  .selct-group{
+    .select{
+      label{
+        font-size: 16px;
+        font-weight: $fontBold;
+        color: $grey;
+      }
+      .jq-selectbox{
+        margin-top: 20px;
+      }
+    }
+    .select+.select{
+      padding-left: 18px;
+    }
+  }
+
+  .section-title{
+    span{
+      text-transform: uppercase;
+      color: red;
+    }
+  }
+
+
+    .select-block {
+       margin-top: 35px;
+      .input-group + .input-group {
+        padding-left: 15px;
+      }
+      .input-group {
+        label {
+          margin-bottom: 15px;
+        }
+      }
+      .select-blok-one {
+        .input-group {
+          input {
+            width: 100%;
+          }
+        }
+      }
+      .select-block-two {
+        padding-left: 15px;
+        width: 15%;
+      }
+    }
+
+.select-container-group {
+  padding: 0 18px 0 18px;
 }
